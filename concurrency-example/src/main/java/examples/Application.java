@@ -8,8 +8,12 @@ public class Application {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		Calculator calculator = new Calculator();
 		Future<CalculationResult> future = calculator.calculate(8);
-//		future.get();
-		System.out.println("I do some other works :-) ");
+		
+		if (future.isDone()) {
+			future.get();
+		}else {
+			System.out.println("I do some other tasks while the calculator is calculating :-) ");
+		}
 	}
 
 }
