@@ -1,9 +1,9 @@
 package examples;
 
-public class CalculationResult {
+public class SaveResponse {
 	Integer result;
 
-	public CalculationResult(Integer result) {
+	public SaveResponse(Integer result) {
 		super();
 		this.result = result;
 	}
